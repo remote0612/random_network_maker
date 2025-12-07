@@ -30,6 +30,15 @@ CL_ensemble_graph=g.create_random_graph_ensemble("chunglu",20)
 ```
 
 4. 차수 분포 분석
+```
+#기존 그래프 차수 분석
+orignal=g.degree_distribution()
+print(orignal)
+
+#무작위 그래프 차수 분석
+ensemble=g.ensemble_degree_distributions(CL_ensemble_graph)
+print(CL_ensemble_graph)
+```
 
 ## 클래스 설명
 1. 
