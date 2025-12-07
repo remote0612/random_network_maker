@@ -16,27 +16,27 @@ import networks as nx
 G = nx.read_gml('./random_network_maker/polbooks.gml')
 
 from random_graph_analysis import *
-g= RandomGraphAnalysis(G)
+maker= RandomGraphAnalysis(G)
 ```
 3. 무작위 그래프 앙상블 생성
 ```
 #그래프 이름, 시뮬레이션 수를 차례대로 입력한다.
 
 # ex1. 100개의 ER 그래프 생성
-er_ensemble_graph=g.create_random_graph_ensemble("ER",100)
+er_ensemble_graph=maker.create_random_graph_ensemble("ER",100)
 
 #ex 2. 20개의 chung-lu 그래프 생성
-CL_ensemble_graph=g.create_random_graph_ensemble("chunglu",20)
+CL_ensemble_graph=maker.create_random_graph_ensemble("chunglu",20)
 ```
 
 4. 차수 분포 분석
 ```
 #기존 그래프 차수 분석
-orignal=g.degree_distribution()
+orignal=maker.degree_distribution()
 print(orignal)
 
 #무작위 그래프 차수 분석
-ensemble=g.ensemble_degree_distributions(CL_ensemble_graph)
+ensemble=maker.ensemble_degree_distributions(CL_ensemble_graph)
 print(CL_ensemble_graph)
 ```
 
