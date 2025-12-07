@@ -4,12 +4,12 @@
 
 ## 사용 방법
 본 방법은 코랩 환경에서 실행하다고 가정하고 설명을 하겠다.
-1. 패키지 설치
-'''python
+1. 패키지 설차
+```
 !git clone https://github.com/remote0612/random_network_maker.git
 %cd ./random_network_maker/
 from random_graph_analysis import *
-'''
+```
 
 ## 클래스 설명
 1. random_graph_list
