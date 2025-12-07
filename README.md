@@ -18,14 +18,26 @@ G = nx.read_gml('./random_network_maker/polbooks.gml')
 from random_graph_analysis import *
 g= RandomGraphAnalysis(G)
 ```
-3. 
+3. 무작위 그래프 앙상블 생성
+```
+#그래프 이름, 시뮬레이션 수를 차례대로 입력한다.
+
+# ex1. 100개의 ER 그래프 생성
+er_ensemble_graph=g.create_random_graph_ensemble("ER",100)
+
+#ex 2. 20개의 chung-lu 그래프 생성
+CL_ensemble_graph=g.create_random_graph_ensemble("chunglu",20)
+```
+
+4. 차수 분포 분석
 
 ## 클래스 설명
-1. random_graph_list
+1. 
+2. random_graph_list
 - 생성 가능한 무작위 그래프 이름을 출력해준다.
 - (ER, configuration, chunglu, BA)
 
-2. ER 그래프를 만드는 함수
+3. ER 그래프를 만드는 함수
 - ER 그래프란 ?\
  -> 원본 그래프의 $N$를 동일하게 하고, 균일 연결 확률 $p$를 이용해 노드를 무작위로 연결해놓은 그래프이다.
  -> G($N, p$) 모델을 사용한다.\
